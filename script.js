@@ -33,7 +33,7 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     orderId: orderId
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbyLwgC2wWMqi1rxzSKxcCDGrLqbRsRsLdslN6o7voWD0DuNjKZuaB2YK3D2MysrPuKX/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbyeMpRlWCVsRj7fx1rKivczJImRM0Z6ES-YrxYjRWRdKVumrlWz5liaFBp7IxYEhdhBvw/exec', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
