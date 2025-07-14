@@ -34,15 +34,15 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
   };
 
   fetch('https://script.google.com/macros/s/AKfycbyvOyDGHtCulH_kMGYMSlC3mpnaoHh_dNc0_IABhk7P55Xg7S4bwXGMC2Ers6lpvVyq/exec', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(data)
-})
-.then(res => res.json())
-.then(() => {
-  window.location.href = `success.html?orderId=${orderId}`;
-})
-.catch(err => alert('Error submitting order: ' + err));
-
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(() => {
+    window.location.href = `success.html?orderId=${orderId}&name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}&pickup=${encodeURIComponent(pickup)}&items=${encodeURIComponent(items.join(', '))}`;
+  })
+  .catch(err => alert('Error submitting order: ' + err));
+});
