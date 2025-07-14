@@ -40,16 +40,9 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
   },
   body: JSON.stringify(data)
 })
-.then(res => res.text())
+.then(res => res.json())
 .then(() => {
   window.location.href = `success.html?orderId=${orderId}`;
 })
 .catch(err => alert('Error submitting order: ' + err));
 
-
-  .then(res => res.text())
-  .then(() => {
-    window.location.href = `success.html?orderId=${orderId}`;
-  })
-  .catch(err => alert('Error submitting order: ' + err));
-});
